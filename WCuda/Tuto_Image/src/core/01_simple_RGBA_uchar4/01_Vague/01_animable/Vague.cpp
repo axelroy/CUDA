@@ -74,7 +74,7 @@ void Vague::processForAutoOMP(uchar4* ptrTabPixels, uint w, uint h, const Domain
     {
     VagueMath vagueMath(w, h); // ici pour preparer cuda
 
-#pragma omp parallel for
+    #pragma omp parallel for
     for (int i = 0; i < h; i++)
 	{
 	for (int j = 0; j < w; j++)
@@ -97,7 +97,7 @@ void Vague::processEntrelacementOMP(uchar4* ptrTabPixels, uint w, uint h, const 
 
     const int WH = w * h;
 
-#pragma omp parallel
+    #pragma omp parallel
 	{
 	const int TID = OmpTools::getTid();
 	const int NB_THREAD = OmpTools::getNbThread(); // dans region parallel

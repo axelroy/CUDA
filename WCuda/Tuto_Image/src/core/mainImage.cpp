@@ -61,14 +61,14 @@ int mainImage(Settings& settings)
     ImageOption nozoomable(false,true,true,true);
 
     Viewer<VagueProvider> vague(nozoomable, 0, 0); 				//  imageOption px py
-    Viewer<DamierProvider> damier(zoomable, 25, 25);				//  imageOption px py
-    Viewer<VagueGrayProvider> vagueGrayUchar(nozoomable, 50, 50); 		//  imageOption px py
-    Viewer<DamierRGBAFloatProvider> damierRGBAfloat4(zoomable, 75, 75); 	//  imageOption px py
-    Viewer<DamierHSBAFloatProvider> damierHSBAfloat4(zoomable, 100, 100);	//  imageOption px py
-    Viewer<DamierHueFloatProvider> damierHuefloat(zoomable, 125, 125);		//  imageOption px py
-    Viewer<EventProvider> eventProvider(zoomable, 150, 150);			//  imageOption px py
-    Viewer<OverlayProvider> overlayProvider(zoomable, 175, 175);		//  imageOption px py
-    Viewer<DomaineProvider> domaineProvider(zoomable, 200, 200);		//  imageOption px py
+//    Viewer<DamierProvider> damier(zoomable, 25, 25);				//  imageOption px py
+//    Viewer<VagueGrayProvider> vagueGrayUchar(nozoomable, 50, 50); 		//  imageOption px py
+//    Viewer<DamierRGBAFloatProvider> damierRGBAfloat4(zoomable, 75, 75); 	//  imageOption px py
+//    Viewer<DamierHSBAFloatProvider> damierHSBAfloat4(zoomable, 100, 100);	//  imageOption px py
+//    Viewer<DamierHueFloatProvider> damierHuefloat(zoomable, 125, 125);		//  imageOption px py
+//    Viewer<EventProvider> eventProvider(zoomable, 150, 150);			//  imageOption px py
+//    Viewer<OverlayProvider> overlayProvider(zoomable, 175, 175);		//  imageOption px py
+//    Viewer<DomaineProvider> domaineProvider(zoomable, 200, 200);		//  imageOption px py
 
     // setSize of frame, size of image  don't change, a texture work for you to adapt the image to the size of the frame
     overlayProvider.setSize(600,600);
