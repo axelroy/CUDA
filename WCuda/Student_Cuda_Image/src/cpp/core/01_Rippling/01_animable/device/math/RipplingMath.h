@@ -25,7 +25,7 @@ class RipplingMath
 
 	__device__ RipplingMath(int w, int h)
 	    {
-	    this->dim2 = w / 2;
+	    this->dim2 = w / 2.f;
 	    }
 
 	// constructeur copie automatique car pas pointeur dans VagueMath
@@ -61,21 +61,16 @@ class RipplingMath
 	__device__
 	void f(uchar* ptrLevelGris, int i, int j, float t)
 	    {
-	    // TODO cf fonction math pdf
-	    // use focntion dij ci-dessous
-
-	    // Note
-	    //		Si code OMP focntionnel:
-	    // 			Step1 : Delete le contenur de ce fichier (si!),
-	    // 			Step2 : Copie-past le contenu de RipplingMath.h de omp,
-	    // 			Step3 : Ajouter __device__  devant methode et constructeur!
+	    float dijResult = dij(i, j);
+	    *ptrLevelGris = 128.f + 127.f * (cos(dijResult / 10.0f - t / 7.0f) / (dijResult / 10.0f + 1.0f));
 	    }
 
 	__device__
-	float  dij(int i, int j)
+	float dij(int i, int j)
 	    {
-	    //TODO cf fonction math pdf
-	    // return ...
+	    float fi = (float)i - dim2 / 2.f;
+	    float fj = (float)j - dim2 / 2.f;
+	    return (float)sqrt(fi * fi + fj * fj);
 	    }
 
 	/*--------------------------------------*\

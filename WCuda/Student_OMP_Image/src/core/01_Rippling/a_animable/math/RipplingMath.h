@@ -66,7 +66,6 @@ class RipplingMath
 
 	void dij(int i, int j, float* ptrResult)
 	    {
-	    //TODO cf fonction math pdf
 	    float fi = i - dim2 / 2;
 	    float fj = j - dim2 / 2;
 	    *ptrResult = sqrt(fi * fi + fj * fj);

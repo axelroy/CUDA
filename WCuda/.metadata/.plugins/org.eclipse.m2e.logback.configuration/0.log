@@ -3819,3 +3819,4 @@ org.eclipse.jdt.core.JavaModelException: HelloWorldNative.java [in com.bilat.tut
 2017-02-12 15:06:59,757 [Worker-11] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2017-02-21 15:17:14,047 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2017-02-28 16:16:06,108 [Worker-10] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-03-07 16:00:22,238 [Worker-26] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.

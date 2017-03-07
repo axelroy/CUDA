@@ -44,7 +44,7 @@ class MandelbrotMath
 	    {
 	    uchar levelGris;
 
-	    f(j, i, t, &levelGris);
+	    f(j, i, t, &nbIteration);
 
 	    ptrColorIJ->x = levelGris;
 	    ptrColorIJ->y = levelGris;
@@ -55,10 +55,9 @@ class MandelbrotMath
 
     private:
 
-	void f(int i, int j, float t, uchar* ptrlevelGris)
+	// Doit sortir le nombre d'itérations
+	int f(int i, int j, float t, uchar* ptrNbIteration)
 	    {
-	    // TODO cf fonction math pdf
-	    // use focntion dij ci-dessous
 	    float dijResult;
 	    dij(i, j, &dijResult);
 	    *ptrlevelGris = 128 + 127 * (cos(dijResult / 10.0f - t / 7.0f) / (dijResult / 10.0f + 1.0f));

@@ -45,9 +45,9 @@ int mainImage(Settings& settings)
 
     GLUTImageViewers::init(settings.getArgc(), settings.getArgv()); // only once
 
-    // ImageOption : (boolean,boolean) : (isSelection,isAnimation)
-    ImageOption zoomable(true);
-    ImageOption nozoomable(false);
+    // ImageOption : (boolean,boolean) : (isSelection ,isAnimation,isOverlay,isShowHelp)
+    ImageOption zoomable(true,true,true,true);
+    ImageOption nozoomable(false,true,true,true);
 
 //    Viewer<RipplingProvider> rippling(nozoomable, 0, 0); //  imageOption px py
     Viewer<MandelbrotProvider> mandelbrot(nozoomable, 0, 0); //  imageOption px py
