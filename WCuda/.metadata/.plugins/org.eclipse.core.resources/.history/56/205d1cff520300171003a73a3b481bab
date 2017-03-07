@@ -47,9 +47,9 @@ class MandelbrotMath
 	    uchar ptrNbIteration;
 	    f(j, i, t, &ptrNbIteration);
 
-	    ptrColorIJ->x = 255;
-	    ptrColorIJ->y = 255;
-	    ptrColorIJ->z = 255;
+	    ptrColorIJ->x = 12;
+	    ptrColorIJ->y = 12;
+	    ptrColorIJ->z = 12;
 
 	    ptrColorIJ->w = 255; //opaque
 	    }

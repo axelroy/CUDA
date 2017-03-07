@@ -44,12 +44,14 @@ class MandelbrotMath
 	    {
 	    uchar levelGris;
 
-	    uchar ptrNbIteration;
-	    f(j, i, t, &ptrNbIteration);
 
-	    ptrColorIJ->x = 255;
-	    ptrColorIJ->y = 255;
-	    ptrColorIJ->z = 255;
+	    // TODO: Il faut remplacer l'ancien système avec un int
+	    int nbIteration = 3;
+	    f(j, i, t, &nbIteration);
+
+	    ptrColorIJ->x = levelGris;
+	    ptrColorIJ->y = levelGris;
+	    ptrColorIJ->z = levelGris;
 
 	    ptrColorIJ->w = 255; //opaque
 	    }
@@ -57,11 +59,11 @@ class MandelbrotMath
     private:
 
 	// Doit sortir le nombre d'itérations
-	int f(int i, int j, float t, uchar* ptrNbIteration)
+	int f(int i, int j, float t, int ptrNbIteration)
 	    {
 	    float dijResult;
 	    dij(i, j, &dijResult);
-	    *ptrNbIteration = 128 + 127 * (cos(dijResult / 10.0f - t / 7.0f) / (dijResult / 10.0f + 1.0f));
+	    return 128 + 127 * (cos(dijResult / 10.0f - t / 7.0f) / (dijResult / 10.0f + 1.0f));
 	    }
 
 	void dij(int i, int j, float* ptrResult)

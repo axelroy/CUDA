@@ -45,11 +45,11 @@ class MandelbrotMath
 	    uchar levelGris;
 
 	    uchar ptrNbIteration;
-	    f(j, i, t, &ptrNbIteration);
+	    f(j, i, t, &nbIteration);
 
-	    ptrColorIJ->x = 255;
-	    ptrColorIJ->y = 255;
-	    ptrColorIJ->z = 255;
+	    ptrColorIJ->x = nbIteration;
+	    ptrColorIJ->y = nbIteration;
+	    ptrColorIJ->z = nbIteration;
 
 	    ptrColorIJ->w = 255; //opaque
 	    }
