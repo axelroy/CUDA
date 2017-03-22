@@ -6,6 +6,7 @@
 #include "cudaTools.h"
 
 #include "RipplingProvider.h"
+#include "MandelbrotProvider.h"
 
 #include "Settings_GPU.h"
 #include "Viewer_GPU.h"
@@ -51,7 +52,9 @@ int mainImage(Settings& settings)
     ImageOption zoomable(true);
     ImageOption nozoomable(false);
 
-    Viewer<RipplingProvider> rippling(nozoomable, 25, 25); // imageOption px py
+    //Viewer<RipplingProvider> rippling(nozoomable, 25, 25); // imageOption px py
+    Viewer<MandelbrotProvider> mandelbrot(zoomable, 25, 25);
+
 
     // Common
     GLUTImageViewers::runALL(); // Bloquant, Tant qu'une fenetre est ouverte

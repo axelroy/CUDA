@@ -1,0 +1,28 @@
+#include "SphereCreator.h"
+#include "AleaTools.h"
+/*--------------------------------------*\
+|* Constructeur *|
+ \*-------------------------------------*/
+SphereCreator::SphereCreator(int nbSpheres, int w, int h, int bord)
+    {
+// Inputs
+    this->nbSpheres = nbSpheres;
+    this->w = w;
+    this->h = h;
+    this->bord = bord;
+// Outputs
+    this->tabSphere = new Sphere[nbSpheres];
+// required default constructeur of type : sphere(void)
+    createSphere();
+    }
+SphereCreator::~SphereCreator()
+    {
+    delete[] tabSphere;
+    }
+/*--------------------------------------*\
+|* Methode *|
+ \*-------------------------------------*/
+Sphere* SphereCreator::getTabSphere()
+    {
+    return tabSphere;
+    }

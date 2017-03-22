@@ -1,4 +1,4 @@
-15:07:58 **** Build of configuration CudaGCC_parallel for project Student_Cuda_Image ****
+20:21:46 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda_Image ****
 cbicc cuda jall 
 
 --------------------------------------------------------
@@ -84,13 +84,13 @@ Cuda compilation tools, release 8.0, V8.0.44
 ==================================================================================
 [CBI] -> Target Name  : Student_Cuda_Image_cuda_80_x86_64
 [CBI] ->
-[CBI] -> Build        : /tmp/ramdrive/bilat/Targets/Student_Cuda_Image/bin/Student_Cuda_Image_cuda_80_x86_64.run
+[CBI] -> Build        : /tmp/ramdrive/arc27/Targets/Student_Cuda_Image/bin/Student_Cuda_Image_cuda_80_x86_64.run
 [CBI] -> Deploy       : ../RELEASE/bin
 [CBI] ->
 [CBI] -> Type	      : EXE
 [CBI] -> Arch	      : x86_64
 [CBI] -> OS	 		  : Linux
-[CBI] -> User	 	  : bilat
+[CBI] -> User	 	  : arc27
 [CBI] ->
 [CBI] -> Task		  : Compiling-Linking !
 ==================================================================================
@@ -125,6 +125,9 @@ Cuda compilation tools, release 8.0, V8.0.44
 [CBI] ->              : src/cpp/core/01_Rippling/01_animable/device/math/
 [CBI] ->              : src/cpp/core/01_Rippling/01_animable/host/
 [CBI] ->              : src/cpp/core/01_Rippling/02_provider/
+[CBI] ->              : src/cpp/core/02_Mandelbrot_Julia/moo/device/math/
+[CBI] ->              : src/cpp/core/02_Mandelbrot_Julia/moo/host/
+[CBI] ->              : src/cpp/core/02_Mandelbrot_Julia/provider/
 
 
 [CBI] -> LIB_PATH (auto detect):
@@ -365,176 +368,32 @@ Cuda compilation tools, release 8.0, V8.0.44
 [CBI] ->              : opencv_videoio_gcc484
 [CBI] ->              : opencv_videostab_gcc484
 
-[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/Student_Cuda_Image/bin
-[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/Student_Cuda_Image/obj
-[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/Student_Cuda_Image/cubin
 
 [CBI] -> Compilation parallel (32 threads)
 
-[Student_Cuda_Image_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/main.cpp
-[Student_Cuda_Image_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/mainAnimable.cpp
-[Student_Cuda_Image_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/mainBarivox.cpp
-[Student_Cuda_Image_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/mainBruteForce.cpp
 [Student_Cuda_Image_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/mainImage.cpp
-[Student_Cuda_Image_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/01_Rippling/02_provider/RipplingProvider.cpp
-[Student_Cuda_Image_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/01_Rippling/01_animable/device/ripplingDevice.cu
-[Student_Cuda_Image_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/01_Rippling/01_animable/host/Rippling.cu
-src/cpp/core/01_Rippling/01_animable/device/math/RipplingMath.h(79): warning: missing return statement at end of non-void function "RipplingMath::dij"
+[Student_Cuda_Image_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Mandelbrot_Julia/moo/host/mandelbrot.cu
+src/cpp/core/02_Mandelbrot_Julia/moo/host/mandelbrot.cu:1:24: fatal error: Mandelbrot.h: No such file or directory
+ #include "Mandelbrot.h"
+                        ^
+compilation terminated.
+make[1]: *** [/tmp/ramdrive/arc27/Targets/Student_Cuda_Image/obj/mandelbrot.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+src/cpp/core/mainImage.cpp: In function ‘int mainImage(gpu::Settings&)’:
+src/cpp/core/mainImage.cpp:55:12: error: ‘MandelbrotProvider’ was not declared in this scope
+     Viewer<MandelbrotProvider> mandelbrot(zoomable, 25, 25);
+            ^
+src/cpp/core/mainImage.cpp:55:30: error: template argument 1 is invalid
+     Viewer<MandelbrotProvider> mandelbrot(zoomable, 25, 25);
+                              ^
+src/cpp/core/mainImage.cpp:55:42: error: invalid type in declaration before ‘(’ token
+     Viewer<MandelbrotProvider> mandelbrot(zoomable, 25, 25);
+                                          ^
+src/cpp/core/mainImage.cpp:55:59: error: expression list treated as compound expression in initializer [-fpermissive]
+     Viewer<MandelbrotProvider> mandelbrot(zoomable, 25, 25);
+                                                           ^
+make[1]: *** [/tmp/ramdrive/arc27/Targets/Student_Cuda_Image/obj/mainImage.o] Error 1
+make: *** [jall] Error 2
 
-src/cpp/core/01_Rippling/01_animable/device/ripplingDevice.cu(47): warning: variable "WH" was declared but never referenced
-
-src/cpp/core/01_Rippling/01_animable/device/ripplingDevice.cu(47): warning: variable "WH" was declared but never referenced
-
-
-[CBI] -> Linking to   : /tmp/ramdrive/bilat/Targets/Student_Cuda_Image/bin/Student_Cuda_Image_cuda_80_x86_64.run
-
-[CBI] -> Library Link :
-[CBI] ->
-[CBI] ->              : -lBilatTools_CPP_301_004_gcc_x86_64
-[CBI] ->              : -lBilatTools_Cuda_301_004_cuda_80_x86_64
-[CBI] ->              : -lBilatTools_Cuda_Image_301_004_cuda_80_x86_64
-[CBI] ->              : -lBilatTools_Image_OpenCV_Cuda_301_004_cuda_80_x86_64
-[CBI] ->              : -lBilatTools_OMP_301_004_gcc_x86_64
-[CBI] ->              : -lBilatTools_OpenCV_301_004_gcc_x86_64
-[CBI] ->              : -lBilat_Fenetrage_Displayable_301_gcc_x86_64
-[CBI] ->              : -lBilat_Fenetrage_Displayable_GL_301_gcc_x86_64
-[CBI] ->              : -lBilat_Fenetrage_FreeGlut_Tools_301_gcc_x86_64
-[CBI] ->              : -lBilat_Image_FreeGlut_301_gcc_x86_64
-[CBI] ->              : -lBilat_Image_FreeGlut_Cuda_301_cuda_80_x86_64
-[CBI] ->              : -lBilat_Image_GL_301_gcc_x86_64
-[CBI] ->              : -lBilat_Image_GL_Cuda_301_cuda_80_x86_64
-[CBI] ->              : -lBilat_OpenGL_Tools_301_gcc_x86_64
-[CBI] ->              : -lGL
-[CBI] ->              : -lGLEW
-[CBI] ->              : -lGLU
-[CBI] ->              : -lOpenCL
-[CBI] ->              : -lboost_atomic-gcc484
-[CBI] ->              : -lboost_atomic-icc17
-[CBI] ->              : -lboost_chrono-gcc484
-[CBI] ->              : -lboost_chrono-icc17
-[CBI] ->              : -lboost_container-gcc484
-[CBI] ->              : -lboost_container-icc17
-[CBI] ->              : -lboost_date_time-gcc484
-[CBI] ->              : -lboost_date_time-icc17
-[CBI] ->              : -lboost_filesystem-gcc484
-[CBI] ->              : -lboost_filesystem-icc17
-[CBI] ->              : -lboost_graph-gcc484
-[CBI] ->              : -lboost_graph-icc17
-[CBI] ->              : -lboost_locale-gcc484
-[CBI] ->              : -lboost_locale-icc17
-[CBI] ->              : -lboost_log-gcc484
-[CBI] ->              : -lboost_log-icc17
-[CBI] ->              : -lboost_log_setup-gcc484
-[CBI] ->              : -lboost_log_setup-icc17
-[CBI] ->              : -lboost_math_c99-gcc484
-[CBI] ->              : -lboost_math_c99-icc17
-[CBI] ->              : -lboost_math_c99f-gcc484
-[CBI] ->              : -lboost_math_c99f-icc17
-[CBI] ->              : -lboost_math_c99l-gcc484
-[CBI] ->              : -lboost_math_c99l-icc17
-[CBI] ->              : -lboost_math_tr1-gcc484
-[CBI] ->              : -lboost_math_tr1-icc17
-[CBI] ->              : -lboost_math_tr1f-gcc484
-[CBI] ->              : -lboost_math_tr1f-icc17
-[CBI] ->              : -lboost_math_tr1l-gcc484
-[CBI] ->              : -lboost_math_tr1l-icc17
-[CBI] ->              : -lboost_prg_exec_monitor-gcc484
-[CBI] ->              : -lboost_prg_exec_monitor-icc17
-[CBI] ->              : -lboost_program_options-gcc484
-[CBI] ->              : -lboost_program_options-icc17
-[CBI] ->              : -lboost_random-gcc484
-[CBI] ->              : -lboost_random-icc17
-[CBI] ->              : -lboost_regex-gcc484
-[CBI] ->              : -lboost_regex-icc17
-[CBI] ->              : -lboost_serialization-gcc484
-[CBI] ->              : -lboost_serialization-icc17
-[CBI] ->              : -lboost_signals-gcc484
-[CBI] ->              : -lboost_signals-icc17
-[CBI] ->              : -lboost_system-gcc484
-[CBI] ->              : -lboost_system-icc17
-[CBI] ->              : -lboost_thread-gcc484
-[CBI] ->              : -lboost_thread-icc17
-[CBI] ->              : -lboost_timer-gcc484
-[CBI] ->              : -lboost_timer-icc17
-[CBI] ->              : -lboost_type_erasure-gcc484
-[CBI] ->              : -lboost_type_erasure-icc17
-[CBI] ->              : -lboost_unit_test_framework-gcc484
-[CBI] ->              : -lboost_unit_test_framework-icc17
-[CBI] ->              : -lboost_wave-gcc484
-[CBI] ->              : -lboost_wave-icc17
-[CBI] ->              : -lboost_wserialization-gcc484
-[CBI] ->              : -lboost_wserialization-icc17
-[CBI] ->              : -lcublas
-[CBI] ->              : -lcuda
-[CBI] ->              : -lcudart
-[CBI] ->              : -lcufft
-[CBI] ->              : -lcufftw
-[CBI] ->              : -lcuinj64
-[CBI] ->              : -lcurand
-[CBI] ->              : -lcusolver
-[CBI] ->              : -lcusparse
-[CBI] ->              : -lglut
-[CBI] ->              : -lgomp
-[CBI] ->              : -lnppc
-[CBI] ->              : -lnppi
-[CBI] ->              : -lnppial
-[CBI] ->              : -lnppicc
-[CBI] ->              : -lnppicom
-[CBI] ->              : -lnppidei
-[CBI] ->              : -lnppif
-[CBI] ->              : -lnppig
-[CBI] ->              : -lnppim
-[CBI] ->              : -lnppist
-[CBI] ->              : -lnppisu
-[CBI] ->              : -lnppitc
-[CBI] ->              : -lnpps
-[CBI] ->              : -lnvToolsExt
-[CBI] ->              : -lnvblas
-[CBI] ->              : -lnvgraph
-[CBI] ->              : -lnvidia-ml
-[CBI] ->              : -lnvrtc
-[CBI] ->              : -lnvrtc-builtins
-[CBI] ->              : -lopencv_calib3d_gcc484
-[CBI] ->              : -lopencv_core_gcc484
-[CBI] ->              : -lopencv_features2d_gcc484
-[CBI] ->              : -lopencv_flann_gcc484
-[CBI] ->              : -lopencv_highgui_gcc484
-[CBI] ->              : -lopencv_imgcodecs_gcc484
-[CBI] ->              : -lopencv_imgproc_gcc484
-[CBI] ->              : -lopencv_ml_gcc484
-[CBI] ->              : -lopencv_objdetect_gcc484
-[CBI] ->              : -lopencv_photo_gcc484
-[CBI] ->              : -lopencv_shape_gcc484
-[CBI] ->              : -lopencv_stitching_gcc484
-[CBI] ->              : -lopencv_superres_gcc484
-[CBI] ->              : -lopencv_video_gcc484
-[CBI] ->              : -lopencv_videoio_gcc484
-[CBI] ->              : -lopencv_videostab_gcc484
-
-
-==================================================================================
-[CBI] -> Target Name  : Student_Cuda_Image_cuda_80_x86_64
-[CBI] -> Location     : /tmp/ramdrive/bilat/Targets/Student_Cuda_Image/bin/Student_Cuda_Image_cuda_80_x86_64.run
-[CBI] -> Deploy 	  : ../RELEASE/bin
-[CBI] ->
-[CBI] -> Type	 	  : EXE
-[CBI] -> Arch	 	  : x86_64
-[CBI] -> OS	 	      : Linux
-[CBI] -> User	 	  : bilat
-[CBI] ->
-[CBI] -> Compilateur  : g++ && nvcc
-[CBI] -> Task		  : End Compiling-Linking !
-[CBI] -> Time		  : 3 (s)
-==================================================================================
-
-
-[CBI] -> Deploying      : ../RELEASE/bin/Student_Cuda_Image_cuda_80_x86_64.run
-
-[CBI] -> Symlink Project Inc
-[CBI] -> To update code completion : ctrl-shift-s   or   gui/index/rebuild
-
-[CBI] -> Student_Cuda_Image_cuda_80_x86_64 : End ALL!
-
-
-15:08:02 Build Finished (took 3s.982ms)
+20:21:48 Build Finished (took 1s.472ms)
 

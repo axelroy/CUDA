@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 4 resources" deleteContents="false" description="Delete 4 resources" element1="/Student_Cuda_Image/src/cpp/core/03_RayTracing/moo/host/Sphere.cpp" element2="/Student_Cuda_Image/src/cpp/core/03_RayTracing/moo/host/Sphere.h" element3="/Student_Cuda_Image/src/cpp/core/03_RayTracing/moo/host/SphereCreator.cu" element4="/Student_Cuda_Image/src/cpp/core/03_RayTracing/moo/host/SphereCreator.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="4" stamp="1490210464031"/>
+</session>

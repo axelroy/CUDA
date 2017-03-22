@@ -40,6 +40,7 @@ bool useAddVecteur()
 
     float* ptrV1 = VectorTools::createV1(n);
     float* ptrV2 = VectorTools::createV2(n);
+    //Utilisé dans addVector
     float* ptrW = new float[n];
 
     // Partie interessante GPGPU
