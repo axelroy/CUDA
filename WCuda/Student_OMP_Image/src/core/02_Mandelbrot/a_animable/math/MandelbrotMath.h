@@ -6,10 +6,6 @@
 #include "ColorTools_CPU.h"
 using namespace cpu;
 
-/*----------------------------------------------------------------------*\
- |*			Declaration 					*|
- \*---------------------------------------------------------------------*/
-
 /*--------------------------------------*\
  |*		Public			*|
  \*-------------------------------------*/
@@ -56,7 +52,6 @@ class MandelbrotMath
 
     private:
 
-	// Doit sortir le nombre d'itérations
 	int f(int i, int j, float t, uchar* ptrNbIteration)
 	    {
 	    float dijResult;
@@ -66,7 +61,6 @@ class MandelbrotMath
 
 	void dij(int i, int j, float* ptrResult)
 	    {
-	    //TODO cf fonction math pdf
 	    float fi = i - dim2 / 2;
 	    float fj = j - dim2 / 2;
 	    *ptrResult = sqrt(fi * fi + fj * fj);

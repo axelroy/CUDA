@@ -8,10 +8,6 @@
 
 using namespace gpu;
 
-/*----------------------------------------------------------------------*\
- |*			Declaration 					*|
- \*---------------------------------------------------------------------*/
-
 /*--------------------------------------*\
  |*		Public			*|
  \*-------------------------------------*/
@@ -31,10 +27,8 @@ class RayTracingMath
 	    this->ptrDevTabSphere = ptrDevTabSphere;
 	    }
 
-	// constructeur copie automatique car pas pointeur dans VagueMath
-
 	__device__
-	 virtual ~RayTracingMath()
+	  virtual ~RayTracingMath()
 	    {
 	    // rien
 	    }
@@ -57,17 +51,17 @@ class RayTracingMath
 	    position.y = j;
 
 	    // Parcourir toutes les spheres
-	    for(int i = 0; i < this->nbSphere; i++)
+	    for (int i = 0; i < this->nbSphere; i++)
 		{
 		Sphere sphere = this->ptrDevTabSphere[i];
 		float hCarre = sphere.hCarre(position);
 
-		if(sphere.isEnDessous(hCarre))
+		if (sphere.isEnDessous(hCarre))
 		    {
 		    float dz = sphere.dz(hCarre);
 		    float distance = sphere.distance(dz);
 
-		    if(distance < min)
+		    if (distance < min)
 			{
 			min = distance;
 			hueMin = sphere.hue(t);
@@ -76,10 +70,9 @@ class RayTracingMath
 		    }
 		}
 
-	    // Afficher la bonne couleur OU noir
 	    if (hueMin >= 0)
 		{
-		ColorTools::HSB_TO_RVB(hueMin,1.f, brightnessMin, ptrColor);
+		ColorTools::HSB_TO_RVB(hueMin, 1.f, brightnessMin, ptrColor);
 		}
 	    else
 		{
@@ -88,7 +81,7 @@ class RayTracingMath
 		ptrColor->z = 0;
 		}
 
-	    // Opacité
+	    // Opacité : 255 = opaque
 	    ptrColor->w = 255;
 	    }
 

@@ -17,9 +17,6 @@ class Sphere
 	    this->rCarre = rayon * rayon;
 	    }
 
-	/**
-	 * required by example for  new Sphere[n]
-	 */
 	__host__ Sphere()
 	    {
 	    // rien

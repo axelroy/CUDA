@@ -2,6 +2,8 @@
 #include <stdlib.h>
 
 #include "RipplingProvider.h"
+#include "MandelbrotProvider.h"
+#include "RayTracingProvider.h"
 
 #include "Animateur_GPU.h"
 #include "Settings_GPU.h"
@@ -46,10 +48,9 @@ int mainAnimable(Settings& settings)
     {
     cout << "\n[Animable] mode" << endl;
 
-    // Attention : pas tous a la fois
-
     rippling();
-    // mandelbrot();
+
+    //mandelbrot();
 
     cout << "\n[Animable] end" << endl;
 

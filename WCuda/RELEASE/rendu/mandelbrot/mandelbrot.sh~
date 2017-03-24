@@ -1,0 +1,4 @@
+# !/bin/bash
+cbirt gl ./Student_Cuda_Image_64.run
+
+./mandelbrot.run

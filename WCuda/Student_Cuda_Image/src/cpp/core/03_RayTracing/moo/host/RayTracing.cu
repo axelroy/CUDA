@@ -56,19 +56,19 @@ RayTracing::RayTracing(int nbSphere, const Grid& grid, uint w, uint h, float dt)
     this->sizeOctetSpheres = nbSphere * sizeof(Sphere);
 
     // MM
-    	{
+	{
 
-    	// MM (malloc Device)
-    	    {
-    	    Device::malloc(&ptrDevTabSphere, sizeOctetSpheres);
-    	    Device::memclear(ptrDevTabSphere, sizeOctetSpheres);
-    	    }
+	// MM (malloc Device)
+	    {
+	    Device::malloc(&ptrDevTabSphere, sizeOctetSpheres);
+	    Device::memclear(ptrDevTabSphere, sizeOctetSpheres);
+	    }
 
-    	// MM (copy Host->Device)
-    	    {
-    	    Device::memcpyHToD(ptrDevTabSphere, ptrTabSphere, sizeOctetSpheres);
-    	    }
-    	}
+	// MM (copy Host->Device)
+	    {
+	    Device::memcpyHToD(ptrDevTabSphere, ptrTabSphere, sizeOctetSpheres);
+	    }
+	}
 
     // Grid
 	{

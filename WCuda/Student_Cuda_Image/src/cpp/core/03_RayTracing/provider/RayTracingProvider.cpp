@@ -30,7 +30,7 @@ Animable_I<uchar4>* RayTracingProvider::createAnimable()
     Grid grid(dg, db);
 
     // Nombre de spheres
-    int nbSphere = 1000;
+    int nbSphere = 500;
 
     return new RayTracing(nbSphere, grid, dw, dh, dt);
     }

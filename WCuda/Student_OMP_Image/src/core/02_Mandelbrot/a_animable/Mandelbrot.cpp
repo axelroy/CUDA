@@ -105,9 +105,7 @@ void Mandelbrot::processEntrelacementOMP(uchar4* ptrTabPixels, uint w, uint h, c
 	while (s < WH)
 	    {
 	    IndiceTools::toIJ(s, w, &i, &j);
-
 	    mandelbrotMath.colorIJ(&ptrTabPixels[s], i, j, t);
-
 	    s += NB_THREADS;
 	    }
 	}

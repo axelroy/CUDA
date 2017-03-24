@@ -17,10 +17,6 @@ __global__ void mandelbrot(uchar4* ptrDevPixels, uint w, uint h, float t, Domain
  |*		Private			*|
  \*-------------------------------------*/
 
-/*----------------------------------------------------------------------*\
- |*			Implementation 					*|
- \*---------------------------------------------------------------------*/
-
 /*--------------------------------------*\
  |*		Public			*|
  \*-------------------------------------*/
@@ -42,7 +38,6 @@ __global__ void mandelbrot(uchar4* ptrDevPixels, uint w, uint h, float t, Domain
 	domaineMath.toXY(i, j, &x, &y);
 
 	mandelbrotMath.colorXY(&ptrDevPixels[s], x, y, t);
-
 	s += NB_THREAD;
 	}
     }
