@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
 <workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1346431186914_27" label="Make" name="Make">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Student_Demo" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/BUILDER" type="4"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1365161242307_133" label="Tuto_API" name="Tuto_API">
@@ -10,10 +11,11 @@
 <item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/Tuto_Image" type="4"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1367415214911_169" label="Student" name="Student">
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Student_Cuda_Image" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Student_OMP_Image" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Student_Cuda" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Student_OMP" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/Student_Cuda" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/Student_Cuda_Image" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/Student_OMP" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/Student_OMP_Image" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/Student_Demo" type="4"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1391266587718_313" label="Target" name="Target">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/RELEASE" type="4"/>
